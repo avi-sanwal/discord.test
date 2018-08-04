@@ -8,7 +8,9 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('pong');
+  } else if (!msg.author.bot) {
+    msg.reply('What do you mean: ' + msg.content);
   }
 });
 
-client.login('token');
+client.login('NDczOTMyMzU2NDQ5OTkyNzA2.DkYsig.vReQqI78fG0jblTqLnEO6BM3xiY');
